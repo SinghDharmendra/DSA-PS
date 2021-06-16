@@ -1,4 +1,4 @@
-package ps.dp;
+package ps.dp.knapsack01;
 
 public class SubSetSumProblem {
     public static void main(String args[])
