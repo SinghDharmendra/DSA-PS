@@ -8,8 +8,8 @@ public class LongestCommonSubString {
     public static void main(String[] args)
     {
         LongestCommonSubString lcs = new LongestCommonSubString();
-        String s1 = "OldSite:GeeksforGeeks.org";
-        String s2 = "NewSite:GeeksQuiz.com";
+        String s1 = "babad";
+        String s2 = "dabab";
 
         char[] X=s1.toCharArray();
         char[] Y=s2.toCharArray();
@@ -41,7 +41,7 @@ public class LongestCommonSubString {
                 if(x[i-1]==y[j-1]){
                     t[i][j]=1+t[i-1][j-1];
 
-                    if(maxLength<t[i][j]){
+                    if(maxLength<t[i][j] && isPalindrome(y,j-t[i][j],j-1)) {
                         endIdx=j;
                         maxLength=t[i][j];
                     }
@@ -58,5 +58,18 @@ public class LongestCommonSubString {
         System.out.println(y.toString());
         System.out.println("LCString : "+(new String(y)).substring(endIdx-maxLength,endIdx));
         return maxLength;
+    }
+
+    private boolean isPalindrome(char[] y, int l, int r) {
+        while(l<r){
+            if(y[l]==y[r]){
+                l++;
+                r--;
+            }else{
+                return false;
+            }
+
+        }
+        return true;
     }
 }
