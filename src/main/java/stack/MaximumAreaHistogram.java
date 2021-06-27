@@ -1,4 +1,7 @@
-package stack.basic;
+package stack;
+
+import stack.basic.NSL;
+import stack.basic.NSR;
 
 /**
  * Find the largest rectangular area possible in a given histogram
@@ -10,7 +13,7 @@ public class MaximumAreaHistogram {
         System.out.println("Maximum area is " + getMaxArea(hist, hist.length));
     }
 
-    private static int getMaxArea(int[] hist, int n) {
+    public static int getMaxArea(int[] hist, int n) {
         int[] left = NSL.nextSmallerElementFromLeft(hist, n, -1);
         int right[] = NSR.nextSmallerElementFromRight(hist, n, n);
         int width[] = new int[n];
