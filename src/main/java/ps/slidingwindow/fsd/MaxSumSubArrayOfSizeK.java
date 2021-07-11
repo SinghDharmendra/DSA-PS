@@ -1,4 +1,4 @@
-package ps.slidingwindow;
+package ps.slidingwindow.fsd;
 
 public class MaxSumSubArrayOfSizeK {
     public static void main(String[] args) {

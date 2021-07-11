@@ -1,4 +1,4 @@
-package ps.slidingwindow;
+package ps.slidingwindow.fsd;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
