@@ -36,6 +36,10 @@ public class CoinChange2MinNumberOfCoinForGivenTotal {
                 }
             }
         }
-        return t[n][total];
+        /**
+         * if No ways can be found then t[n][total] will be Integer.MIN_VALUE-1
+         * so final output should be -1 in that case
+         */
+        return t[n][total]==maxValue?-1:t[n][total];
     }
 }
