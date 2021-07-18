@@ -5,17 +5,18 @@ public class DiameterOfTree {
 
     public static void main(String[] args) {
 
+
         DiameterOfTree mps = new DiameterOfTree();
-        TreeNode root = new TreeNode(10);
+        TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
-        root.right = new TreeNode(10);
-        root.left.left = new TreeNode(20);
-        root.left.right = new TreeNode(1);
-        root.right.right = new TreeNode(-25);
-        root.right.right.left = new TreeNode(3);
-        root.right.right.right = new TreeNode(4);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
+
+        //Correction path should be length of path not the no vertices
+        //so answer will be result-1
         System.out.println("maximum path sum is : " +
-                mps.diameter(root));
+                (mps.diameter(root) - 1));
 
     }
 
