@@ -21,10 +21,12 @@ public class LargestSubarrayOfSumK {
                max=Math.max(max,j-i+1);
                j++;
            }else{
-               while(sum>k ){
-                   sum-=arr[i];
+               while (sum > k) {
+                   sum -= arr[i];
                    i++;
                }
+               if (sum == k)
+                   max = Math.max(max, j - i + 1);
                j++;
            }
        }
