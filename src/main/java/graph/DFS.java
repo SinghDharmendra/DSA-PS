@@ -14,7 +14,8 @@ public class DFS {
 
         System.out.println(
                 "Following is Depth First Traversal");
-         dfsTraverse(g);
+
+        dfsTraverse(g);
 
 
     }

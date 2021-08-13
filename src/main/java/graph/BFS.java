@@ -26,10 +26,19 @@ public class BFS {
         int v=g.v;
         boolean [] visited = new boolean[v];
 
+
         q.add(source);
-        while(!q.isEmpty()){
-            int curV=q.remove();
-            List<Integer> adjList=g.getAdj()[source];
+        visited[source] = true;
+        while(!q.isEmpty()) {
+            int curV = q.remove();
+            System.out.println(curV);
+            List<Integer> adjList = g.getAdj()[curV];
+            for (int nei : adjList) {
+                if (!visited[nei]) {
+                    q.add(nei);
+                    visited[nei] = true;
+                }
+            }
 
 
         }
